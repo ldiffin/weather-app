@@ -1,0 +1,4 @@
+let apiKey = "d62b9f500f4938fde12e0ac245421a5c";
+let city = "sydney";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+console.log(apiUrl);

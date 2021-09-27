@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8a846d8cbf.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-body main-body">
+          <div class="row align-items-center justify-content-end">
+              <div class="col-3">
+              <form id="search-form">
+                <div class="form-group">
+                <input type="text" placeholder="Search for location.." class="form-control search-button" autofocus="on" id="search-input"/>
+                </div>
+              </div>
+            <div class="col-1">
+              <input type="submit" value="search" class="search-button"/>
+            </div>
+            <div class="col-2">
+              <button class="search-button gps-location" id="gps-search">current</button>
+            </div>
+            </form>
+            <div class="col-1">
+              <button class="celsius button-change-units" id="celsius-button">°C</button>
+              <button class="fahrenheit button-change-units" id="fahrenheit-button">°F</button>
+            </div>
+          </div>
+          <span>Current Weather</span>
+          <h1>Toronto, ON</h1>
+          <span id="current-date">Sat. August 28 11:10am</span>
+          <div class="row align-items-center">
+            <div class="col-2 todays-weather">
+                <i class="fas fa-sun current-weather-emoji"></i>
+                <br>
+                Mostly Sunny</div>
+            <div class="col-4 current-temp" id="current-temperature">25</div>
+            <div class="col-2 todays-weather">
+                Feels like: <span id="feels-like">32</span>°
+                <br>
+                Humidity: <span id="current-humidity">78</span>% 
+                <br>
+                Wind: <span id="wind-speed">5</span> km/h
+            </div>
+            <h4>Five Day Forecast</h4>
+            <div class="card future-forecast">
+            <div class="card-body">
+            <div class="row">
+                <div class="col">
+                    <span class="daily-title">Sun</span>
+                    <br>
+                    8/29
+                    <br>
+                    <i class="fas fa-cloud-showers-heavy"></i>
+                    <br>
+                    29°/22°
+                </div>
+                <div class="col">
+                   <span class="daily-title">Mon</span>
+                    <br>
+                    8/30
+                    <br>
+                    <i class="fas fa-cloud-sun"></i>
+                    <br>
+                     29°/19°
+                </div>
+                <div class="col">
+                    <span class="daily-title">Tue</span>
+                    <br>
+                    8/31
+                    <br>
+                    <i class="fas fa-cloud-sun"></i>
+                    <br>
+                    26°/18°
+                </div><div class="col">
+                    <span class="daily-title">Wed</span>
+                    <br>
+                    9/1
+                    <br>
+                    <i class="fas fa-sun"></i>
+                    <br>
+                    26°/16°
+                </div><div class="col">
+                  <span class="daily-title">Thu</span>
+                    <br>
+                    9/2
+                    <br>
+                    <i class="fas fa-sun"></i>
+                    <br>
+                    24°/16°
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js">
+    </script>
+  </body>
+</html>
