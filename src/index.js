@@ -7,11 +7,13 @@ function displayTemperature(response) {
   let feelsLikeDisplay = document.querySelector("#feels-like");
   let humidityDisplay = document.querySelector("#current-humidity");
   let windSpeed = document.querySelector("#wind-speed");
+  let description = document.querySelector("#current-description");
   temperatureDisplay.innerHTML = Math.round(response.data.main.temp);
   cityHeader.innerHTML = cityName;
   feelsLikeDisplay.innerHTML = Math.round(feelsLike);
   humidityDisplay.innerHTML = Math.round(response.data.main.humidity);
   windSpeed.innerHTML = Math.round(response.data.wind.speed);
+  description.innerHTML = response.data.weather[0].description;
 }
 
 function weatherReturn(event) {
